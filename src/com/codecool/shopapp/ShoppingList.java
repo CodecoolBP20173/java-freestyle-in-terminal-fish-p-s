@@ -22,7 +22,6 @@ public class ShoppingList {
         int userOpt = 0;
 
         while (userOpt != 2) {
-            obj.moveTo(1,1);
             System.out.println("__/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\___       ");
             System.out.println("_\\/\\\\\\///////////__\\/\\\\\\/////////\\\\\\_       ");
             System.out.println(" _\\/\\\\\\_____________\\/\\\\\\_______\\/\\\\\\_      ");
