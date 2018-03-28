@@ -39,6 +39,7 @@ public class ShoppingList {
             userOpt = menuOption.nextInt();    
             if (userOpt == 1) {
                 obj.clearScreen();
+                obj.moveTo(1,1);
                 createList(obj, shoppingItems);
             }
             if (userOpt == 2) {
