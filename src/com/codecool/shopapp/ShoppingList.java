@@ -22,12 +22,23 @@ public class ShoppingList {
         int userOpt = 0;
 
         while (userOpt != 2) {
-            System.out.println("");
-            System.out.println("----- Welcome to My Shopping List------");
-            System.out.println("(1) Create a new shopping list. ");
-            System.out.println("(2) Exit. ");
-            userOpt = menuOption.nextInt();  
+            System.out.println("__/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\___       ");
+            System.out.println("_\\/\\\\\\///////////__\\/\\\\\\/////////\\\\\\_       ");
+            System.out.println(" _\\/\\\\\\_____________\\/\\\\\\_______\\/\\\\\\_      ");
+            System.out.println("  _\\/\\\\\\\\\\\\\\\\\\\\\\_____\\/\\\\\\\\\\\\\\\\\\\\\\\\\\/__     ");
+            System.out.println("   _\\/\\\\\\///////______\\/\\\\\\/////////____    ");
+            System.out.println("    _\\/\\\\\\_____________\\/\\\\\\_____________   ");
+            System.out.println("     _\\/\\\\\\_____________\\/\\\\\\_____________  ");
+            System.out.println("      _\\/\\\\\\_____________\\/\\\\\\_____________ ");
+            System.out.println("       _\\///______________\\///______________");
+            System.out.println();
+            System.out.println("   ------ Fish & Ps Shopping List------");
+            System.out.println();
+            System.out.println("       (1) Create a new shopping list. ");
+            System.out.println("       (2) Exit. ");
+            userOpt = menuOption.nextInt();    
             if (userOpt == 1) {
+                obj.clearScreen();
                 createList(obj, shoppingItems);
             }
             if (userOpt == 2) {
@@ -49,16 +60,16 @@ public class ShoppingList {
                 isStillShopping = false;
                 obj.clearScreen();
                 obj.moveTo(1,1);
-                displayList(shoppingItems, iterator, isStillShopping);
+                displayList(shoppingItems, iterator, isStillShopping, obj);
                 break;
             } 
             shoppingItems[iterator++] = itemName;
             obj.clearScreen();
             obj.moveTo(1,1);
-            displayList(shoppingItems, iterator, isStillShopping);
+            displayList(shoppingItems, iterator, isStillShopping, obj);
         }
     }
-    public static void displayList(String shoppingItems[], int iterator, Boolean isStillShopping) {
+    public static void displayList(String shoppingItems[], int iterator, Boolean isStillShopping, Terminal obj) {
         System.out.println(".____________________________.");
         System.out.println("|                            |");
         if (isStillShopping == false){
@@ -71,7 +82,11 @@ public class ShoppingList {
         }
         if (isStillShopping == false){
             System.out.println("|           Thank you! Mom   |");
-            System.out.println("|                     xoxo   |");
+            System.out.print("|                     ");
+            obj.setColor("31");
+            System.out.print("xoxo");
+            obj.setColor("37");
+            System.out.println("   |");
         }
         
         System.out.println("*----------------------------*");
