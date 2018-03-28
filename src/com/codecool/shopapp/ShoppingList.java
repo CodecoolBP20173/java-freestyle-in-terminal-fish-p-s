@@ -14,11 +14,13 @@ public class ShoppingList {
 
     
     public static void main(String[] args) {
+        Terminal obj = new Terminal();
+        obj.clearScreen();
+        obj.moveTo(1,1);
         String[] shoppingItems = new String[50];
         Boolean isStillShopping = true;
         int iterator = 0;
         while (isStillShopping) { 
-            System.out.println(isStillShopping);
             System.out.println();
             System.out.println("Enter item name:");
             Scanner userInput = new Scanner(System.in);
@@ -28,6 +30,8 @@ public class ShoppingList {
                 break;
             } 
             shoppingItems[iterator++] = itemName;
+            obj.clearScreen();
+            obj.moveTo(1,1);
             displayList(shoppingItems, iterator);
         }
     }
