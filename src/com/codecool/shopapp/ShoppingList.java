@@ -33,15 +33,19 @@ public class ShoppingList {
             System.out.println("      _\\/\\\\\\_____________\\/\\\\\\_____________ ");
             System.out.println("       _\\///______________\\///______________");
             System.out.println();
-            System.out.println("  ------ Welcome to My Shopping List------");
+            System.out.println("----- Fish & Ps Shopping List------");
             System.out.println();
             System.out.println("       (1) Create a new shopping list. ");
             System.out.println("       (2) Exit. ");
             userOpt = menuOption.nextInt();    
             if (userOpt == 1) {
+                //obj.moveTo(5,10);
+                obj.clearScreen();
                 createList(obj, shoppingItems);
             }
             if (userOpt == 2) {
+                obj.clearScreen();
+                System.out.println("------Thanks for using our application!------");
                 break;
             }
         }
@@ -53,6 +57,7 @@ public class ShoppingList {
         while (isStillShopping) { 
             System.out.println();
             System.out.println("Enter item name:");
+            System.out.println("(to finish your list, enter x)");
             Scanner userInput = new Scanner(System.in);
             String itemName = userInput.nextLine();   
             if (itemName.equals("x")) {
@@ -78,7 +83,7 @@ public class ShoppingList {
             }
 
         for (int i = 0; i < iterator; i++){
-            System.out.println("|   " + shoppingItems[i] + stringMultiply(" ", (25-shoppingItems[i].length())) + "|" );        
+            System.out.println("| - " + shoppingItems[i] + stringMultiply(" ", (25-shoppingItems[i].length())) + "|" );        
         }
         if (isStillShopping == false){
             System.out.println("|           Thank you! Mom   |");
