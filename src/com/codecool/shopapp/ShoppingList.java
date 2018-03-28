@@ -39,10 +39,14 @@ public class ShoppingList {
             userOpt = menuOption.nextInt();    
             if (userOpt == 1) {
                 obj.clearScreen();
+                obj.moveTo(1,1);
                 createList(obj, shoppingItems);
+                obj.clearScreen();
+                obj.moveTo(1,1);
             }
             if (userOpt == 2) {
                 obj.clearScreen();
+                obj.moveTo(1,1);
                 System.out.println("------Thanks for using our application!------");
                 break;
             }
@@ -54,7 +58,7 @@ public class ShoppingList {
         int iterator = 0;
         while (isStillShopping) { 
             System.out.println();
-            System.out.println("Enter item name:");
+            System.out.println("Enter item name (to finish your list, enter x):");
             Scanner userInput = new Scanner(System.in);
             String itemName = userInput.nextLine();   
             if (itemName.equals("x")) {
@@ -63,6 +67,9 @@ public class ShoppingList {
                 obj.clearScreen();
                 obj.moveTo(1,1);
                 displayList(shoppingItems, iterator, isStillShopping, obj);
+                System.out.println("Enter x to return to main menu");
+                Scanner finalInput = new Scanner(System.in);
+                String input = finalInput.nextLine();
                 break;
             } 
             shoppingItems[iterator++] = itemName;
