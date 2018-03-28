@@ -26,21 +26,36 @@ public class ShoppingList {
             Scanner userInput = new Scanner(System.in);
             String itemName = userInput.nextLine();   
             if (itemName.equals("x")) {
+                
                 isStillShopping = false;
+                obj.clearScreen();
+                obj.moveTo(1,1);
+                displayList(shoppingItems, iterator, isStillShopping);
                 break;
             } 
             shoppingItems[iterator++] = itemName;
             obj.clearScreen();
             obj.moveTo(1,1);
-            displayList(shoppingItems, iterator);
+            displayList(shoppingItems, iterator, isStillShopping);
         }
     }
-    public static void displayList(String shoppingItems[], int iterator) {
-        System.out.println("___________________________________");
+    public static void displayList(String shoppingItems[], int iterator, Boolean isStillShopping) {
+        System.out.println(".____________________________.");
+        System.out.println("|                            |");
+        if (isStillShopping == false){
+            System.out.println("| Honey! Please buy...       |");
+            System.out.println("|                            |");
+            }
+
         for (int i = 0; i < iterator; i++){
-            System.out.println("|   " + shoppingItems[i] + stringMultiply(" ", (30-shoppingItems[i].length())) + "|" );        
+            System.out.println("|   " + shoppingItems[i] + stringMultiply(" ", (25-shoppingItems[i].length())) + "|" );        
         }
-        System.out.println("-----------------------------------");
+        if (isStillShopping == false){
+            System.out.println("|           Thank you! Mom   |");
+            System.out.println("|                     xoxo   |");
+        }
+        
+        System.out.println("*----------------------------*");
     }    
 
 
