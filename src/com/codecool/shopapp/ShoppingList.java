@@ -55,16 +55,16 @@ public class ShoppingList {
                 isStillShopping = false;
                 obj.clearScreen();
                 obj.moveTo(1,1);
-                displayList(shoppingItems, iterator, isStillShopping);
+                displayList(shoppingItems, iterator, isStillShopping, obj);
                 break;
             } 
             shoppingItems[iterator++] = itemName;
             obj.clearScreen();
             obj.moveTo(1,1);
-            displayList(shoppingItems, iterator, isStillShopping);
+            displayList(shoppingItems, iterator, isStillShopping, obj);
         }
     }
-    public static void displayList(String shoppingItems[], int iterator, Boolean isStillShopping) {
+    public static void displayList(String shoppingItems[], int iterator, Boolean isStillShopping, Terminal obj) {
         System.out.println(".____________________________.");
         System.out.println("|                            |");
         if (isStillShopping == false){
@@ -77,7 +77,11 @@ public class ShoppingList {
         }
         if (isStillShopping == false){
             System.out.println("|           Thank you! Mom   |");
-            System.out.println("|                     xoxo   |");
+            System.out.print("|                     ");
+            obj.setColor("31");
+            System.out.print("xoxo");
+            obj.setColor("37");
+            System.out.println("   |");
         }
         
         System.out.println("*----------------------------*");
