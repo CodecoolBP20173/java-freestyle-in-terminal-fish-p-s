@@ -22,11 +22,22 @@ public class ShoppingList {
         int userOpt = 0;
 
         while (userOpt != 2) {
-            System.out.println("");
-            System.out.println("----- Welcome to My Shopping List------");
-            System.out.println("(1) Create a new shopping list. ");
-            System.out.println("(2) Exit. ");
-            userOpt = menuOption.nextInt();  
+            obj.moveTo(1,1);
+            System.out.println("__/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\___       ");
+            System.out.println("_\\/\\\\\\///////////__\\/\\\\\\/////////\\\\\\_       ");
+            System.out.println(" _\\/\\\\\\_____________\\/\\\\\\_______\\/\\\\\\_      ");
+            System.out.println("  _\\/\\\\\\\\\\\\\\\\\\\\\\_____\\/\\\\\\\\\\\\\\\\\\\\\\\\\\/__     ");
+            System.out.println("   _\\/\\\\\\///////______\\/\\\\\\/////////____    ");
+            System.out.println("    _\\/\\\\\\_____________\\/\\\\\\_____________   ");
+            System.out.println("     _\\/\\\\\\_____________\\/\\\\\\_____________  ");
+            System.out.println("      _\\/\\\\\\_____________\\/\\\\\\_____________ ");
+            System.out.println("       _\\///______________\\///______________");
+            System.out.println();
+            System.out.println("  ------ Welcome to My Shopping List------");
+            System.out.println();
+            System.out.println("       (1) Create a new shopping list. ");
+            System.out.println("       (2) Exit. ");
+            userOpt = menuOption.nextInt();    
             if (userOpt == 1) {
                 createList(obj, shoppingItems);
             }
