@@ -18,6 +18,25 @@ public class ShoppingList {
         obj.clearScreen();
         obj.moveTo(1,1);
         String[] shoppingItems = new String[50];
+        Scanner menuOption = new Scanner(System.in);
+        int userOpt = 0;
+
+        while (userOpt != 2) {
+            System.out.println("");
+            System.out.println("----- Welcome to My Shopping List------");
+            System.out.println("(1) Create a new shopping list. ");
+            System.out.println("(2) Exit. ");
+            userOpt = menuOption.nextInt();  
+            if (userOpt == 1) {
+                createList(obj, shoppingItems);
+            }
+            if (userOpt == 2) {
+                break;
+            }
+        }
+    }        
+
+    public static void createList(Terminal obj, String shoppingItems[]) {
         Boolean isStillShopping = true;
         int iterator = 0;
         while (isStillShopping) { 
