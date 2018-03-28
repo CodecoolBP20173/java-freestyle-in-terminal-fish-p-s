@@ -22,6 +22,16 @@ public class ShoppingList {
         int userOpt = 0;
 
         while (userOpt != 2) {
+            System.out.println("__/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\___       ");
+            System.out.println("_\\/\\\\\\///////////__\\/\\\\\\/////////\\\\\\_       ");
+            System.out.println(" _\\/\\\\\\_____________\\/\\\\\\_______\\/\\\\\\_      ");
+            System.out.println("  _\\/\\\\\\\\\\\\\\\\\\\\\\_____\\/\\\\\\\\\\\\\\\\\\\\\\\\\\/__     ");
+            System.out.println("   _\\/\\\\\\///////______\\/\\\\\\/////////____    ");
+            System.out.println("    _\\/\\\\\\_____________\\/\\\\\\_____________   ");
+            System.out.println("     _\\/\\\\\\_____________\\/\\\\\\_____________  ");
+            System.out.println("      _\\/\\\\\\_____________\\/\\\\\\_____________ ");
+            System.out.println("       _\\///______________\\///______________");
+            System.out.println();
             System.out.println("");
             System.out.println("----- Fish & Ps Shopping List------");
             System.out.println("");
